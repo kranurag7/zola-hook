@@ -39,7 +39,7 @@
         {% endif %}
         {% if blog.pages %}
         <h2>Recent posts</h2>
-        <ul>
+        <ul style="list-style-type: none;">
             {% for post in blog.pages | slice(end=config.extra.latest_posts) %} <!-- latest 20 posts -->
             <li> 
                 <time>{{ post.date | date(format="%d %b %Y") }}</time> - 
