@@ -6,6 +6,9 @@
     <meta name="description" content="{% block description %}{{ section.description | default(value=config.description) }}{% endblock description %}">
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
     {% block extra_head %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
     <link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}">
     {% endblock extra_head %}
     {% block feed_link %}
