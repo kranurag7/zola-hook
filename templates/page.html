@@ -5,7 +5,12 @@
 
 {% block header %}
 <header class="space">
-    <a href="{{ config.base_url }}">&LeftArrow; Home</a>
+    <!-- <a href="{{ config.base_url }}">&LeftArrow; Home</a> -->
+    <nav>
+        {% for item in config.extra.main_menu %}
+        <a href="{{ config.base_url ~ item.url }}">{{item.name}}</a>  
+        {% endfor %}
+    </nav>       
 </header>
 {% endblock header %}
 
